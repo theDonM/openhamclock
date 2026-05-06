@@ -21,10 +21,6 @@ const maintainCache = (cache, ttlMs, maxEntries, label = 'Cache') => {
         purged++;
       });
   }
-
-  if (purged > 0) {
-    logDebug(`[${label}] purged ${purged} stale entries, ${Object.keys(cache).length} remaining`);
-  }
 };
 
 module.exports = { maintainCache };
