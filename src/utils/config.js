@@ -34,7 +34,7 @@ export const DEFAULT_CONFIG = {
   theme: 'dark', // 'dark', 'light', 'legacy', or 'retro'
   layout: 'modern', // 'modern' or 'classic'
   mouseZoom: 50, // Factor to affect rate of zooming with scrollwheel (1-100)
-  timezone: '', // IANA timezone (e.g. 'America/Regina') — empty = browser default
+  timezone: '', // IANA timezone (e.g. 'America/Regina') — empty means consumers must fall back to browser default themselves; passing '' to Intl.DateTimeFormat throws RangeError
   use12Hour: true,
   swapHeaderClocks: false, // false = UTC first, true = Local first
   showMutualReception: true, // Show gold star on PSK spots with mutual reception
