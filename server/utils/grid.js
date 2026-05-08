@@ -137,25 +137,6 @@ const latLonToMaidenhead = ({ lat, lon }, precision = 6) => {
 };
 
 /**
- * Convert lat/lon to Maidenhead grid locator (6-character).
- */
-function latLonToGrid(lat, lon) {
-  if (!isFinite(lat) || !isFinite(lon)) return null;
-
-  let adjLon = lon + 180;
-  let adjLat = lat + 90;
-
-  const field1 = String.fromCharCode(65 + Math.floor(adjLon / 20));
-  const field2 = String.fromCharCode(65 + Math.floor(adjLat / 10));
-  const square1 = Math.floor((adjLon % 20) / 2);
-  const square2 = Math.floor((adjLat % 10) / 1);
-  const subsq1 = String.fromCharCode(65 + Math.floor(((adjLon % 2) * 60) / 5));
-  const subsq2 = String.fromCharCode(65 + Math.floor(((adjLat % 1) * 60) / 2.5));
-
-  return `${field1}${field2}${square1}${square2}${subsq1}${subsq2}`.toUpperCase();
-}
-
-/**
  * Get amateur radio band name from frequency in Hz.
  */
 function getBandFromHz(freqHz) {
@@ -204,7 +185,6 @@ module.exports = {
   maidenheadToLatLon,
   latLonToMaidenhead,
   maidenheadToBoundingBox,
-  latLonToGrid,
   getBandFromHz,
   getBandFromKHz,
   haversineDistance,
