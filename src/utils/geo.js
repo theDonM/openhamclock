@@ -138,14 +138,6 @@ export const latLonToMaidenhead = ({ lat, lon }, precision = 6) => {
 };
 
 /**
- * Calculate Maidenhead grid square (size 6) from coordinates.
- * Deprecated, use latLonToMaidenhead({lat, lon}) which defaults to size 6.
- */
-export const calculateGridSquare = (lat, lon) => {
-  return latLonToMaidenhead({ lat, lon }, 6);
-};
-
-/**
  * Calculate bearing between two points
  */
 export const calculateBearing = (lat1, lon1, lat2, lon2) => {
@@ -545,7 +537,6 @@ export default {
   maidenheadToLatLon,
   latLonToMaidenhead,
   maidenheadToBoundingBox,
-  calculateGridSquare,
   calculateBearing,
   calculateDistance,
   getSunPosition,

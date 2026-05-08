@@ -23,7 +23,6 @@ export {
   latLonToMaidenhead,
   maidenheadToLatLon,
   maidenheadToBoundingBox,
-  calculateGridSquare,
   calculateBearing,
   calculateDistance,
   getSunPosition,
