@@ -41,6 +41,7 @@
 // (audit of May 9, 2026)
 // disabled satellites with no record on CelesTrak, and with no record on Space-Track for period starting Jan 1, 2026.
 // removed TEVEL satellites, added TEVEL2 satellites
+// remove SO-124 - decayed
 //
 
 const HAM_SATELLITES = {
@@ -89,15 +90,6 @@ const HAM_SATELLITES = {
     downlink: '435.400 MHz',
     uplink: '145.850 MHz',
     tone: '67.0 Hz',
-  },
-  'SO-124': {
-    // CelesTrak: NONE
-    // Space-Track OK
-    norad: 62690,
-    name: 'SO-124 (HADES-R)',
-    color: '#ff44aa',
-    priority: 1,
-    mode: 'FM',
   },
   'SO-125': {
     // CelesTrak group: amateur
